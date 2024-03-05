@@ -1,15 +1,15 @@
 import '../App.css'
 import { motion } from "framer-motion"
 import Comp from "../assets/comp.jpg"
-import Man from "../assets/man.jpg"
+import Me from "../assets/me2.jpg"
 
-function Card ({ title, description, languages}) {
+function Card ({ title, description, languages, link}) {
     return (
-        <div className="w-[280px] h-[400px] font-NTR bg-other-dark rounded-xl hover:bg-hover-dark hover:scale-105 p-8 flex flex-col gap-8 transition ease-in-out">
+        <a href={link} target='_blank' className="w-[280px] h-[400px] font-NTR bg-other-dark rounded-xl hover:bg-hover-dark hover:scale-105 p-8 flex flex-col gap-8 transition ease-in-out">
             <h2 className="text-violet-200 text-3xl">{title}</h2>
             <p className="text-gray-300 text-lg">{description}</p>
             <p className="text-gray-300">{languages}</p>
-        </div>
+        </a>
     )
 }
 
@@ -43,7 +43,7 @@ export default function Landing() {
                     <h3 className="text-gray-300 text-xl">I'm a turbo-charged software whiz who thrives on whipping up mind-blowing solutions to tricky puzzles.</h3>
                 </motion.div>
             </div>
-            <motion.div initial={{ opacity: 0, y: 200}} whileInView={{ opacity: 1, y:0,  transition: { duration: 1, delay: 0.5}}} viewport={{once:true}} id="about" className="w-4/5 h-full font-NTR p-10 py-40 flex flex-col">
+            <motion.div initial={{ opacity: 0, y: 200}} whileInView={{ opacity: 1, y:0,  transition: { duration: 1, delay: 0.5}}} viewport={{once:true}} id="about" className="w-4/5 h-full font-NTR p-10 py-20 flex flex-col">
                 <h1 className="text-violet-200 text-6xl m-5">/about me</h1>
                 <div className="flex justify-between">
                     <div className="text-gray-300 text-2xl w-1/2 flex flex-col gap-5">
@@ -58,16 +58,16 @@ export default function Landing() {
                         </ul>
                     </div>
                     <div className="w-[400px] h-[400px]">
-                        <img className="w-full h-full object-cover rounded-xl" src={Man} alt="A man" />
+                        <img className="w-full h-full object-cover rounded-xl" src={Me} alt="A man" />
                     </div>
                 </div>
             </motion.div>
-            <motion.div initial={{ opacity: 0, y: 200}} whileInView={{ opacity: 1, y:0,  transition: { duration: 1, delay: 0.5}}} viewport={{once:true}} id="projects" className="w-4/5 h-full font-NTR px-10 py-40 flex flex-col">
+            <motion.div initial={{ opacity: 0, y: 200}} whileInView={{ opacity: 1, y:0,  transition: { duration: 1, delay: 0.5}}} viewport={{once:true}} id="projects" className="w-4/5 h-full font-NTR px-10 py-20 flex flex-col">
                 <h1 className="text-violet-200 text-6xl m-5">/projects</h1>
                 <div className="w-full flex gap-5 justify-center my-10">
-                    <Card title="Rock Paper Scissors Game" description="A simple rock, paper scissors game that allows two players to play against each other and also keeps track of the scores. The game also has a reset functionality which resets the scores." languages="Javascript, HTML, CSS"></Card>
-                    <Card title=" Weather Finder" description="A simple web app that uses an API to find products that are available in the Kenyan market, display the name and price of the product with a link to a store. that is selling it." languages="Javascript, HTML, CSS"></Card>
-                    <Card title="Netflix Clone" description="A netflix clone built using HTML and CSS resembling the Netflix site" languages="HTML, CSS"></Card>
+                    <Card link="https://kx-3.github.io/Rock-Paper-Scissors-Two-Player-Game/" title="Rock Paper Scissors Game" description="A simple rock, paper scissors game that allows two players to play against each other and also keeps track of the scores. The game also has a reset functionality which resets the scores." languages="Javascript, HTML, CSS"></Card>
+                    <Card link="https://react-to-do-app-kipkirui.vercel.app" title="To Do App" description="A To Do Application built using React.js that track a users activities and accomplished tasks. The application allows the user to add, edit, delete and mark tasks as completed." languages="Javascript, HTML, CSS"></Card>
+                    <Card link="https://kx-3.github.io/ZINDUA-NETFLIX-CLONE/" title="Netflix Clone" description="A netflix clone built using HTML and CSS resembling the Netflix site" languages="HTML, CSS"></Card>
                 </div>
             </motion.div>
         </div>
