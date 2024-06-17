@@ -1,7 +1,9 @@
 import '../App.css'
 import { motion } from "framer-motion"
 import Comp from "../assets/comp.jpg"
-import Me from "../assets/me2.jpg"
+import Joy from "../assets/IMG-20240611-WA0002.jpg"
+import Rif from "../assets/IMG-20240612-WA0089.jpg"
+import Poly from "../assets/IMG-20240612-WA0091.jpg"
 
 function Card ({ title, description, languages, link}) {
     return (
@@ -36,7 +38,7 @@ export default function Landing() {
                 </motion.div>
                 <motion.div animate={{ opacity: 1, y: 0, transition: { duration: 1 } }} initial={{ opacity: 0, y: 200 }} className="h-[150px] w-[650px] flex flex-col items-center text-center">
                     <div className="flex">
-                        <h1 className="text-7xl">hi there I'm <mark className="text-green-200 bg-transparent">Kipkirui</mark>{`${wave}`}</h1>
+                        <h1 className="text-7xl">hi there I'm <mark className="text-green-200 bg-transparent">Joy</mark>{`${wave}`}</h1>
                         <motion.div variants={cursorVariants} animate="blinking" className="h-20 w-[7px] bg-green-200 rounded-lg"></motion.div>
                     </div>
                     <h2 className="text-gray-300 text-4xl">Crafting Code, Cultivating Creativity</h2>
@@ -58,16 +60,14 @@ export default function Landing() {
                         </ul>
                     </div>
                     <div className="w-[400px] h-[400px]">
-                        <img className="w-full h-full object-cover rounded-xl" src={Me} alt="A man" />
+                        <img className="w-full h-full object-cover rounded-xl" src={Poly} alt="A man" />
                     </div>
                 </div>
             </motion.div>
             <motion.div initial={{ opacity: 0, y: 200}} whileInView={{ opacity: 1, y:0,  transition: { duration: 1, delay: 0.5}}} viewport={{once:true}} id="projects" className="w-4/5 h-full font-NTR px-10 py-20 flex flex-col">
                 <h1 className="text-violet-200 text-6xl m-5">/projects</h1>
                 <div className="w-full flex gap-5 justify-center my-10">
-                    <Card link="https://kx-3.github.io/Rock-Paper-Scissors-Two-Player-Game/" title="Rock Paper Scissors Game" description="A simple rock, paper scissors game that allows two players to play against each other and also keeps track of the scores. The game also has a reset functionality which resets the scores." languages="Javascript, HTML, CSS"></Card>
-                    <Card link="https://react-to-do-app-kipkirui.vercel.app" title="To Do App" description="A To Do Application built using React.js that track a users activities and accomplished tasks. The application allows the user to add, edit, delete and mark tasks as completed." languages="Javascript, HTML, CSS"></Card>
-                    <Card link="https://kx-3.github.io/ZINDUA-NETFLIX-CLONE/" title="Netflix Clone" description="A netflix clone built using HTML and CSS resembling the Netflix site" languages="HTML, CSS"></Card>
+                    <Card link="https://github.com/joymacharia123" title="GitHub" description="Contains a series of projects that I have worked on." languages="Javascript, HTML, CSS, Python"></Card>
                 </div>
             </motion.div>
         </div>
